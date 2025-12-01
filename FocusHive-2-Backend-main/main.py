@@ -28,7 +28,10 @@ Base.metadata.create_all(bind=engine)
 #Configurar CORS para el frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:5173"],
+    allow_origins=["http://localhost:3000",
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "https://focushive2-2.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
